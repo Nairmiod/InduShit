@@ -1,0 +1,12 @@
+version: "0.1"
+
+services:
+  node: 
+    image: node:latest
+    container_name: InduStuff
+    command: bash -c "cd src/client && npm i &&  node index"
+    hostname: node
+    volumes: 
+      - ./script:/scripts
+    ports:
+      - 4102:4102
